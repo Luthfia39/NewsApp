@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Berita App</string>
+    <string-array name="kategori">
+        <item>Pilih kategori</item>
+        <item>Hiburan</item>
+        <item>Olahraga</item>
+        <item>Politik</item>
+        <item>Kecantikan</item>
+    </string-array>
+</resources>

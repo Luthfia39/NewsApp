@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".listNews"
+    android:layout_margin="20dp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/titleList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Berita"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textColor="@color/black"/>
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_news"/>
+    </ScrollView>
+</LinearLayout>
