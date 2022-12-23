@@ -4,47 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:layout_margin="30dp"
+    tools:context=".Daftar"
+    android:layout_margin="30sp"
     android:orientation="vertical">
-
     <TextView
-        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingBottom="20dp"
-        android:text="Masuk"
+        android:text="Daftar"
         android:textSize="30dp"
         android:textStyle="bold"
         android:textAlignment="center"
         android:textColor="@color/black"/>
-<!--    <TextView-->
-<!--        android:id="@+id/txt_uname"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Nama Pengguna"-->
-<!--        android:textSize="15dp"-->
-<!--        android:textColor="@color/black"/>-->
-<!--    <EditText-->
-<!--        android:id="@+id/edt_uname"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="10dp"-->
-<!--        android:layout_marginBottom="20dp"-->
-<!--        android:background="@drawable/background"-->
-<!--        android:padding="10dp"-->
-<!--        android:textSize="15dp"-->
-<!--        android:inputType="text"-->
-<!--        android:hint="Nama Pengguna"/>-->
     <TextView
-        android:id="@+id/txt_uname"
+        android:id="@+id/txt_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Email"
+        android:text="Nama Lengkap"
         android:textSize="15dp"
         android:textColor="@color/black"/>
     <EditText
-        android:id="@+id/edt_uname"
+        android:id="@+id/edt_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -52,7 +32,24 @@
         android:background="@drawable/background"
         android:padding="10dp"
         android:textSize="15dp"
+        android:hint="John Doe"/>
+    <TextView
+        android:id="@+id/txt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="15dp"
+        android:textColor="@color/black"/>
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/background"
+        android:padding="10dp"
+        android:textSize="15dp"
         android:hint="example@email.com"/>
     <TextView
         android:id="@+id/txt_pw"
@@ -74,27 +71,8 @@
         android:textSize="15dp"
         android:hint="***********"/>
     <Button
-        android:id="@+id/btn_login"
+        android:id="@+id/btn_signin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Masuk"
-        android:layout_alignParentBottom="true"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
-        android:orientation="horizontal"
-        android:gravity="center">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Belum punya akun?"/>
-        <TextView
-            android:id="@+id/for_register"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="  Daftar"
-            android:textColor="@color/purple_700"
-            android:textStyle="bold"/>
-    </LinearLayout>
+        android:text="Daftar"/>
 </LinearLayout>

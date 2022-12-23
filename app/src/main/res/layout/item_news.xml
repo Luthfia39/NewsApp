@@ -29,4 +29,10 @@
         android:paddingTop="5dp"
         android:text="kategori"
         android:textStyle="italic"/>
+    <TextView
+        android:id="@+id/btn_bookmark"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:background="@drawable/bookmark"
+        android:layout_gravity="right"/>
 </LinearLayout>

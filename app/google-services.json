@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "329752485719",
+    "firebase_url": "https://uas-luthfia-default-rtdb.firebaseio.com",
+    "project_id": "uas-luthfia",
+    "storage_bucket": "uas-luthfia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329752485719:android:8bd901898c8e874f66e812",
+        "android_client_info": {
+          "package_name": "com.example.beritaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "329752485719-mqm38qleg4atnog3tp46v4agknr4vp2l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjBIxcSxOUzwXpE2XorhTq6W5HM2vz7sk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "329752485719-mqm38qleg4atnog3tp46v4agknr4vp2l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

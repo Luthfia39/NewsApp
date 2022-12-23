@@ -15,7 +15,7 @@ import android.widget.Spinner;
 import java.util.Calendar;
 
 public class DetailUser extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    String SpinnerText;
+    String SpinnerText, user_email;
     EditText input_date;
     int age;
 
@@ -26,6 +26,9 @@ public class DetailUser extends AppCompatActivity implements AdapterView.OnItemS
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_user);
+
+        Intent intent = getIntent();
+        user_email = intent.getStringExtra("USER");
 
         input_date = findViewById(R.id.input_birthdate);
         input_date.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +53,7 @@ public class DetailUser extends AppCompatActivity implements AdapterView.OnItemS
                 Intent news = new Intent(view.getContext(), listNews.class);
                 news.putExtra(MESSAGE_AGE, age);
                 news.putExtra(MESSAGE_TAG, SpinnerText);
+                news.putExtra("USER", user_email);
                 startActivity(news);
             }
         });

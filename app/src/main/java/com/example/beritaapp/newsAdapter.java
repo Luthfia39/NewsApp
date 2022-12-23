@@ -10,11 +10,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 
 public class newsAdapter extends RecyclerView.Adapter<newsAdapter.ViewHolder> {
     private final ArrayList<News> values;
     private final LayoutInflater inflater;
+
+    DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+
     // constructor adapter
     public newsAdapter(Context context, ArrayList<News> values) {
         this.values = values;
@@ -42,20 +48,30 @@ public class newsAdapter extends RecyclerView.Adapter<newsAdapter.ViewHolder> {
                 Intent intent = new Intent(holder.itemView.getContext(), DetailNews.class);
                 intent.putExtra("TITLE", news.title);
                 intent.putExtra("TAG", news.tag);
+                intent.putExtra("MIN-AGE", news.minAge);
                 intent.putExtra("CONTENT", news.content);
+                intent.putExtra("WRITER", news.writer);
+//                intent.putExtra("USER", user_email);
                 holder.itemView.getContext().startActivity(intent);
+            }
+        });
+        holder.bookmark.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                holder.bookmark.setBackground();
             }
         });
     }
 
     // objek untuk menampilkan list berita
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView txt_judul, txt_tag, txt_konten;
+        TextView txt_judul, txt_tag, txt_konten, bookmark;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             txt_judul = itemView.findViewById(R.id.judul);
             txt_tag = itemView.findViewById(R.id.tag);
             txt_konten = itemView.findViewById(R.id.konten);
+            bookmark = itemView.findViewById(R.id.btn_bookmark);
         }
     }
 
